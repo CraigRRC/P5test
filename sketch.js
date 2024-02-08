@@ -12,6 +12,8 @@ function setup() {
 
 function draw() {
   background(220);
-  directionalLight(255, 0, 0, 1, 1, -0.9);
+  directionalLight(255, 255, 255, -(mouseX - width / 2), -(mouseY - height / 2), 0)
+  translate(0, sin(frameCount * 0.01) * height / 4, 0);
   sphere(200);
+  console.log(mouseX);
 }
